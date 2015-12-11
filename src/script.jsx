@@ -1,9 +1,12 @@
 var Card =  React.createClass({
+    getInitialState:function(){
+        return{};
+    },
     render:function(){
         return (
             <div>
-                <img src="https://avatars.githubusercontent.com/u/239742?v=3" width="200"/>
-                <h3>Pete Hunt</h3>
+                <img src="" width="200"/>
+                <h3></h3>
                 <hr/>
             </div>
         );
@@ -14,7 +17,7 @@ var Main = React.createClass({
     render: function(){
         return (
             <div>
-                <Card />
+                <Card login="petehunt"/>
             </div>
         )
     }
