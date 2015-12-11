@@ -2,11 +2,17 @@ var Card =  React.createClass({
     getInitialState:function(){
         return{};
     },
+    componentDidMount:function(){
+        var component = this;
+        $.get("https://api.github.com/users/petehunt", function(data){
+            component.setState(data);
+        });
+    },
     render:function(){
         return (
             <div>
-                <img src="" width="200"/>
-                <h3></h3>
+                <img src={this.state.avatar_url} width="200"/>
+                <h3>{this.state.name}</h3>
                 <hr/>
             </div>
         );
