@@ -20,11 +20,16 @@ var Card =  React.createClass({
 })
 
 var Main = React.createClass({
+    getInitialState:function(){
+        return { logins:['zpao','fisherwebdev'] };
+    },
     render: function(){
+        var cards = this.state.logins.map(function(login){
+            return (<Card login={login}/>)
+        });
         return (
             <div>
-                <Card login="spicyj"/>
-                <Card login="petehunt"/>
+                {cards}
             </div>
         )
     }
