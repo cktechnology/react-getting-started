@@ -43,10 +43,12 @@ var AnswerFrame = React.createClass({
 var NumbersFrame = React.createClass({
     render:function(){
         var maxNumbersToChooseFrom = 9;
-        var allNumberChoices = [];
+        var allNumberChoices = [], className, selectedNumbers = this.props.selectedNumbers;
+
         for(var i=1; i <= maxNumbersToChooseFrom; i++){
+            className = "number selected-" + (selectedNumbers.indexOf(i)>=0);
             allNumberChoices.push(
-                <div className="number">{i}</div>
+                <div className={className}>{i}</div>
             );
         }
         return(
@@ -61,7 +63,7 @@ var NumbersFrame = React.createClass({
 
 var Game = React.createClass({
     getInitialState:function(){
-        return{selectedNumbers:[3,6]};
+        return{selectedNumbers:[]};
     },
     render:function(){
         return(
@@ -74,7 +76,7 @@ var Game = React.createClass({
                   <AnswerFrame selectedNumbers={this.state.selectedNumbers}/>
               </div>
 
-              <NumbersFrame />
+              <NumbersFrame selectedNumbers={this.state.selectedNumbers}/>
 
           </div>
         );
