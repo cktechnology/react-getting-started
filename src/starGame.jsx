@@ -1,7 +1,7 @@
 // Components for the star game example
 var StarsFrame = React.createClass({
     render:function(){
-        var numberOfStars = 5;
+        var numberOfStars = Math.floor(Math.random()*9) + 1;
         var stars = [];
         for(var i=0; i<numberOfStars; i++){
             stars.push(
@@ -40,6 +40,25 @@ var AnswerFrame = React.createClass({
     }
 });
 
+var NumbersFrame = React.createClass({
+    render:function(){
+        var maxNumbersToChooseFrom = 9;
+        var allNumberChoices = [];
+        for(var i=1; i <= maxNumbersToChooseFrom; i++){
+            allNumberChoices.push(
+                <div className="number">{i}</div>
+            );
+        }
+        return(
+            <div id="numbers-frame">
+                <div className="well">
+                    {allNumberChoices}
+                </div>
+            </div>
+        );
+    }
+});
+
 var Game = React.createClass({
     render:function(){
         return(
@@ -51,6 +70,9 @@ var Game = React.createClass({
                   <ButtonFrame />
                   <AnswerFrame />
               </div>
+
+              <NumbersFrame />
+
           </div>
         );
     }
