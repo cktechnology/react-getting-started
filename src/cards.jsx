@@ -60,7 +60,7 @@ var Main = React.createClass({
     }
 });
 
-React.render(<Main />, document.getElementById("root"))
+React.render(<Main />, document.getElementById("cards"))
 
 
 //API URL with JSON data: https://api.github.com/users/petehunt

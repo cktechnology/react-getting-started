@@ -4,14 +4,21 @@
     <head>
         <meta charset="UTF-8"/>
         <title>Getting Started With React</title>
+        <link data-require="bootstrap@*" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <script data-require="bootstrap@*" data-semver="3.3.6" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script data-require="jquery@*" data-semver="2.1.4" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-        <div id="root"></div>
+        <div id="starGame" class="container"></div>
+        <!--<div id="cards"></div>-->
         <!--<div id="countingButtons"></div>-->
+
+        <!--Use the latest js files. Grab the reference from: http://facebook.github.io/react/downloads.html-->
         <script src="https://fb.me/react-0.14.3.js"></script>
         <script src="https://fb.me/react-dom-0.14.3.js"></script>
-        <script src="build/script.js"></script>
+
+        <script src="build/cards.js"></script>
         <script src="build/countingButtons.js"></script>
     </body>
 </html>
