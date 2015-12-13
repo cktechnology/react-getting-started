@@ -12,11 +12,11 @@
     width: 20%;
     float: left;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 #star-frame .well, #answer-frame .well {
-    height: 150px;
+    height: 200px;
 }
 
 #numbers-frame .number{
