@@ -91,17 +91,20 @@ var Game = React.createClass({
         this.setState({selectedNumbers : selectedNumbers});
     },
     render:function(){
+        var selectedNumbers = this.state.selectedNumbers;
+        var numberOfStars = this.state.numberOfStars;
+        
         return(
           <div id="game">
               <h2>Play Star 9</h2>
               <hr/>
               <div class="clearfix">
-                  <StarsFrame numberOfStars={this.state.numberOfStars}/>
+                  <StarsFrame numberOfStars={numberOfStars}/>
                   <ButtonFrame />
-                  <AnswerFrame selectedNumbers={this.state.selectedNumbers} unselectNumber={this.unselectNumber}/>
+                  <AnswerFrame selectedNumbers={selectedNumbers} unselectNumber={this.unselectNumber}/>
               </div>
 
-              <NumbersFrame selectedNumbers={this.state.selectedNumbers} selectNumber={this.selectNumber}/>
+              <NumbersFrame selectedNumbers={selectedNumbers} selectNumber={this.selectNumber}/>
 
           </div>
         );

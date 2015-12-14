@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffc7c358-1138-474f-9369-c72d696a50d7" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/starGame.jsx" afterPath="$PROJECT_DIR$/src/starGame.jsx" />
     </list>
     <ignored path="react-getting-started.iws" />
@@ -36,8 +37,8 @@
       <file leaf-file-name="starGame.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/starGame.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5067751">
-              <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
+            <state vertical-scroll-proportion="0.5298103">
+              <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -328,8 +329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/starGame.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5067751">
-          <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
+        <state vertical-scroll-proportion="0.5298103">
+          <caret line="95" column="8" selection-start-line="95" selection-start-column="8" selection-end-line="95" selection-end-column="8" />
           <folding />
         </state>
       </provider>
