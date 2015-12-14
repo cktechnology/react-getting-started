@@ -44,13 +44,13 @@ var NumbersFrame = React.createClass({
         var maxNumbersToChooseFrom = 9;
         var allNumberChoices = [],
             className,
-            clickNumber = this.props.clickNumber,
+            selectNumber = this.props.selectNumber,
             selectedNumbers = this.props.selectedNumbers;
 
         for(var i=1; i <= maxNumbersToChooseFrom; i++){
             className = "number selected-" + (selectedNumbers.indexOf(i)>=0);
             allNumberChoices.push(
-                <div className={className} onClick={clickNumber.bind(null,i)}>{i}</div>
+                <div className={className} onClick={selectNumber.bind(null,i)}>{i}</div>
             );
         }
         return(
@@ -68,7 +68,7 @@ var Game = React.createClass({
         return{ numberOfStars:Math.floor(Math.random()*9) + 1,
                 selectedNumbers:[]};
     },
-    clickNumber:function(clickedNumber){
+    selectNumber:function(clickedNumber){
         if (this.state.selectedNumbers.indexOf(clickedNumber) < 0) {
             this.setState({selectedNumbers: this.state.selectedNumbers.concat(clickedNumber)});
         }
@@ -84,7 +84,7 @@ var Game = React.createClass({
                   <AnswerFrame selectedNumbers={this.state.selectedNumbers}/>
               </div>
 
-              <NumbersFrame selectedNumbers={this.state.selectedNumbers} clickNumber={this.clickNumber}/>
+              <NumbersFrame selectedNumbers={this.state.selectedNumbers} selectNumber={this.selectNumber}/>
 
           </div>
         );
